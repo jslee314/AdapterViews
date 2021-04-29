@@ -1,5 +1,6 @@
 package com.jslee.adapterViews
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,8 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    val adapterViewDatas = arrayOf("ListView", "CustomListView",
-            "ArrayAdapter", "SimpleAdapter", "CustomAdapter",
+    val adapterViewDatas = arrayOf("ListView(ArrayAdapter)", "CustomListView(ArrayAdapter)",
+            "SimpleAdapter", "CustomAdapter",
             "Spinner", "GrideView", "ViewPager",
             "AutoCompleteTextView", "Single/Multi ChoiceListView",
             "RecyclerView")
@@ -32,8 +33,53 @@ class MainActivity : AppCompatActivity() {
         override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             when(parent?.id){
                 R.id.listView -> {
-
                     textViewTitle.text = "${adapterViewDatas[position]} 보러가기 !! "
+
+                    when(adapterViewDatas[position]){
+                        "ListView(ArrayAdapter)" ->{
+
+                        }
+                        "CustomListView(ArrayAdapter)" ->{
+                            val intent = Intent(this@MainActivity, CustomListViewActivity::class.java)
+                            startActivity(intent)
+                        }
+                        "ArrayAdapter" ->{
+
+
+                        }
+                        "SimpleAdapter" ->{
+
+
+                        }
+                        "CustomAdapter" ->{
+
+
+                        }
+                        "Spinner" ->{
+
+
+                        }
+                        "GrideView" ->{
+
+
+                        }
+                        "ViewPager" ->{
+
+
+                        }
+                        "AutoCompleteTextView" ->{
+
+
+                        }
+                        "Single/Multi ChoiceListView" ->{
+
+
+                        }
+                        "RecyclerView" ->{
+
+
+                        }
+                    }
                 }
             }
         }
