@@ -1,4 +1,4 @@
-package com.jslee.recyclerviews
+package com.jslee.adapterViews
 
 import org.junit.Test
 
