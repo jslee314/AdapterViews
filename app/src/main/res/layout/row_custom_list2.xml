@@ -21,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/rowKRTextView"
         android:layout_width="wrap_content"
@@ -32,7 +31,7 @@
         app:layout_constraintBottom_toTopOf="@+id/rowENTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline_vertical"
-         />
+        />
 
     <TextView
         android:id="@+id/rowENTextView"

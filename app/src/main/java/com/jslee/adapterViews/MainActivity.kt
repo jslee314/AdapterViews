@@ -10,10 +10,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    val adapterViewDatas = arrayOf("ListView(ArrayAdapter)", "CustomListView(ArrayAdapter)", "CustomListView(SimpleAdapter)", "CustomAdapter",
+    val adapterViewDatas = arrayOf("ListView(ArrayAdapter)", "Custom ListView1(ArrayAdapter)",
+        "Custom ListView2(SimpleAdapter)", "Custom Adapter View(BaseAdapter)",
             "Spinner", "GrideView", "ViewPager",
             "AutoCompleteTextView", "Single/Multi ChoiceListView",
-            "RecyclerView")
+            "RecyclerView(RecyclerView.Adapter)")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,17 +39,18 @@ class MainActivity : AppCompatActivity() {
                         "ListView(ArrayAdapter)" ->{
 
                         }
-                        "CustomListView(ArrayAdapter)" ->{
+                        "Custom ListView1(ArrayAdapter)" ->{
                             val intent = Intent(this@MainActivity, CustomListViewActivity::class.java)
                             startActivity(intent)
                         }
-                        "CustomListView(SimpleAdapter)" ->{
+                        "Custom ListView2(SimpleAdapter)" ->{
                             val intent = Intent(this@MainActivity, CustomListView2Activity::class.java)
                             startActivity(intent)
 
                         }
-                        "CustomAdapter" ->{
-
+                        "Custom Adapter View(BaseAdapter)" ->{
+                            val intent = Intent(this@MainActivity, CustomAdapterViewActivity::class.java)
+                            startActivity(intent)
 
                         }
                         "Spinner" ->{
@@ -71,8 +73,9 @@ class MainActivity : AppCompatActivity() {
 
 
                         }
-                        "RecyclerView" ->{
-
+                        "RecyclerView(RecyclerView.Adapter)" ->{
+                            val intent = Intent(this@MainActivity, RecyclerViewActivity::class.java)
+                            startActivity(intent)
 
                         }
                     }
